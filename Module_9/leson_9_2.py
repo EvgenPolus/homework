@@ -88,3 +88,14 @@ print(result)
 # вместо простого значения мы указываем пару "ключ:значение"
 result = {x: x**2 for x in my_numbers}
 print(result)
+
+#    ОБЬЕДИНЕНИЕ СПИСКОВ
+#В переменную third_result запишите словарь созданный при помощи сборки,
+# где парой ключ-значение будет строка-длина строки.
+# Значения строк будут перебираться из объединённых вместе списков first_strings и second_strings.
+# Условие записи пары в словарь - чётная длина строки.
+first_strings = ['Elon', 'Musk', 'Programmer', 'Monitors', 'Variable']
+second_strings = ['Task', 'Git', 'Comprehension', 'Java', 'Computer', 'Assembler']
+
+third_result = {x:len(x) for x in first_strings + second_strings if not len(x) % 2 }
+print(third_result)
